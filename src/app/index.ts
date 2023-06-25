@@ -75,6 +75,12 @@ Using default app name: nativeforgeApp
         .replace(/\$appName/g, props.name);
       writeFileSync(packages, newPackages)
 
+      const next = `${appPath}/apps/next/pages/_app.tsx`
+      const newNext = readFileSync(next, "utf-8")
+        .replace(/\$appName/g, props.name);
+      writeFileSync(next, newNext)
+      this.log(term.green("Updated next settings"))
+
       const appJson = `${appPath}/apps/expo/app.json`
       const newAppJson = readFileSync(appJson, "utf-8")
         .replace(/\$appName/g, props.name)

@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@inquirer/prompts": "^2.2.0",
+    "@types/cli-color": "^2.0.2",
     "cli-color": "^2.0.3",
     "fs-extra": "^11.1.1",
     "inquirer": "^9.2.7",
