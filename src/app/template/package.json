@@ -16,6 +16,7 @@
   },
   "scripts": {
     "native": "cd apps/expo && yarn start",
+    "init:android": "cd apps/expo && yarn android",
     "web": "cd apps/next && yarn next"
   },
   "engines": {
