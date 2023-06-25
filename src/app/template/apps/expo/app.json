@@ -1,12 +1,15 @@
 {
   "expo": {
-    "name": "solito-nativewind",
-    "slug": "solito-nativewind",
+    "name": "$appName",
+    "slug": "$appName",
     "version": "1.0.0",
-    "scheme": "solito-nativewind",
+    "scheme": "$appName",
     "platforms": ["ios", "android"],
     "ios": {
-      "bundleIdentifier": "com.solito.nativewind"
+      "bundleIdentifier": "$appID"
+    },
+    "android": {
+      "package": "$appID"
     }
   }
 }

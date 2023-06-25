@@ -1,5 +1,5 @@
 {
-  "name": "solito-with-tailwind",
+  "name": "$appName",
   "private": true,
   "workspaces": [
     "apps/*",
