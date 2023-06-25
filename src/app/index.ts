@@ -1,7 +1,11 @@
 import Generator from 'yeoman-generator';
 
-class NativeForgeGenerator extends Generator {
-    constructor(args: any, opts: any) {
+type BaseArgs = {
+    name: string
+}
+
+module.exports = class extends Generator {
+    constructor(args: string | string[], opts: BaseArgs) {
       super(args, opts);
   
       this.argument('name', {
@@ -9,7 +13,11 @@ class NativeForgeGenerator extends Generator {
         type: String,
         description: 'The name of the thing',
       });
+
+    }
+
+    method1() {
+        this.log(this.options.name)
+        this.log('method 1 just ran');
     }
   }
-  
-  module.exports = NativeForgeGenerator;

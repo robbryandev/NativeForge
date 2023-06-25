@@ -9,11 +9,12 @@
     "yeoman-generator"
   ],
   "scripts": {
-    "install": "gulp"
+    "build": "gulp",
+    "install": "yarn build"
   },
   "dependencies": {
     "fs-extra": "^11.1.1",
-    "yeoman-generator": "^1.0.0"
+    "yeoman-generator": "5.9.0"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.1",
