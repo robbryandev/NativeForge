@@ -1,29 +1,29 @@
-import { exec } from "child_process"
-import { series } from "gulp"
-import {copySync, readdirSync, statSync} from "fs-extra"
+const proc = require("child_process")
+const gulp = require("gulp")
+const fs = require("fs-extra")
 
-function typescript(cb: CallableFunction) {
-    exec("tsc")
+function typescript(cb) {
+    proc.exec("tsc")
     cb()
 }
 
-function copyTemplates(cb: CallableFunction) {
+function copyTemplates(cb) {
     const sourceDir = "./src"
     const destinationDir = "./generators"
-    const copyRec = (src: string, dest: string) => {
+    const copyRec = (src, dest) => {
         try {
-            const gens = readdirSync(sourceDir);
+            const gens = fs.readdirSync(sourceDir);
             for (const gen of gens) {
                 const searchDir = `${sourceDir}/${gen}`
-                const dirs = readdirSync(searchDir);
+                const dirs = fs.readdirSync(searchDir);
                 for (const d of dirs) {
                     const dir = `${searchDir}/${d}`
                     const dirSegments = dir.split("/")
                     const dirName = dirSegments[dirSegments.length - 1]
-                    const stats = statSync(dir);
+                    const stats = fs.statSync(dir);
                     if (stats.isDirectory() && dirName == "template") {
                         console.log(dir)
-                        copySync(dir, dir.replace(src, dest), {})
+                        fs.copySync(dir, dir.replace(src, dest), {})
                     }
                 }
             }
@@ -35,7 +35,7 @@ function copyTemplates(cb: CallableFunction) {
     cb()
 }
 
-exports.default = series(
+exports.default = gulp.series(
     typescript,
     copyTemplates
 )

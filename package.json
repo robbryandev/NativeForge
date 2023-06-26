@@ -1,10 +1,13 @@
 {
   "name": "generator-nativeforge",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "description": "build cross platform apps using react native expo and generators",
   "license": "MIT",
   "files": [
-    "generators"
+    "src",
+    "gulpfile.js",
+    "tsconfig.json",
+    "yarn.lock"
   ],
   "keywords": [
     "yeoman-generator"
