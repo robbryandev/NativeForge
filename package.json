@@ -1,6 +1,6 @@
 {
   "name": "generator-nativeforge",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "build cross platform apps using react native expo and generators",
   "license": "MIT",
   "files": [
@@ -18,19 +18,19 @@
   },
   "dependencies": {
     "@inquirer/prompts": "^2.2.0",
-    "@types/cli-color": "^2.0.2",
     "cli-color": "^2.0.3",
     "fs-extra": "^11.1.1",
     "inquirer": "^9.2.7",
+    "gulp": "^4.0.2",
     "yeoman-generator": "5.9.0"
   },
   "devDependencies": {
+    "@types/cli-color": "^2.0.2",
     "@types/fs-extra": "^11.0.1",
     "@types/gulp": "^4.0.11",
     "@types/node": "^20.3.1",
     "@types/terminal-kit": "^2.5.1",
     "@types/yeoman-generator": "^5.2.11",
-    "gulp": "^4.0.2",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.3"
   }
