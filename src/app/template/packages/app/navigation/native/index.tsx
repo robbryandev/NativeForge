@@ -14,6 +14,9 @@ export function NativeNavigation() {
       <Stack.Screen
         name="home"
         component={HomeScreen}
+        options={{
+          title: 'Home',
+        }}
       />
     </Stack.Navigator>
   )

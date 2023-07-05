@@ -107,7 +107,7 @@ You can add other folders inside of `packages/` if you know what you're doing an
 - Expo local dev:
   - First, build a dev client onto your device or simulator
     - `cd apps/expo`
-    - Then, either `expo run:ios`, or `eas build`
+    - Then, either `expo run:ios`, `expo run:android`, or `eas build`
   - After building the dev client, from the root of the monorepo...
     - `yarn native` (This runs `expo start --dev-client`)
 

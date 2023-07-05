@@ -16,11 +16,10 @@
   },
   "scripts": {
     "native": "cd apps/expo && yarn start",
-    "init:android": "cd apps/expo && yarn android",
     "web": "cd apps/next && yarn next"
   },
-  "engines": {
-    "node": ">=16.0.0 <17.0.0"
-  },
-  "packageManager": "yarn@3.4.1"
+  "packageManager": "yarn@3.4.1",
+  "dependencies": {
+    "tailwindcss": "^3.3.2"
+  }
 }

@@ -22,18 +22,15 @@ npx yo nativeforge your_app_name
 cd your_app_name
 ```
 
-### Run on web
-```bash
-yarn web
-```
+### Start the app
 
-### Configure for android
-* Setup virtual device and sdk in [android studio](https://docs.expo.dev/workflow/android-studio-emulator/)
-* Initialize a development build
-```bash
-yarn init:android
-```
-* After that finishes you can close out of it and start the native app
-```bash
-yarn native
-```
+- Install dependencies: `yarn`
+
+- Next.js local dev: `yarn web`
+  - Runs `yarn next`
+- Expo local dev:
+  - First, build a dev client onto your device or simulator
+    - `cd apps/expo`
+    - Then, either `expo run:ios`, `expo run:android`, or `eas build`
+  - After building the dev client, from the root of the monorepo...
+    - `yarn native` (This runs `expo start --dev-client`)
