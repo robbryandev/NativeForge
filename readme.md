@@ -12,8 +12,7 @@ yarn
 
 ### Tools
 ```bash
-yarn global add yo
-yarn global add generator-nativeforge
+yarn global add yo generator-nativeforge
 ```
 
 ### Create project
@@ -27,7 +26,7 @@ cd your_app_name
 - Install dependencies: `yarn`
 
 - Next.js local dev: `yarn web`
-  - Runs `yarn next`
+  - Runs `yarn dev`
 - Expo local dev:
   - First, build a dev client onto your device or simulator
     - `cd apps/expo`

@@ -2,6 +2,13 @@ const proc = require("child_process")
 const gulp = require("gulp")
 const fs = require("fs-extra")
 
+function removeOld(cb) {
+    if (fs.existsSync("./generators")) {
+        fs.removeSync("./generators")
+    }
+    cb()
+}
+
 function typescript(cb) {
     proc.exec("tsc")
     cb()
@@ -36,6 +43,7 @@ function copyTemplates(cb) {
 }
 
 exports.default = gulp.series(
+    removeOld,
     typescript,
     copyTemplates
 )

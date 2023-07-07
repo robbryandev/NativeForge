@@ -16,7 +16,7 @@
   },
   "scripts": {
     "native": "cd apps/expo && yarn start",
-    "web": "cd apps/next && yarn next"
+    "web": "cd apps/next && yarn dev"
   },
   "packageManager": "yarn@3.4.1",
   "dependencies": {

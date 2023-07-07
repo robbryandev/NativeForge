@@ -80,7 +80,12 @@ Using default app name: nativeforgeApp
         .replace(/\$appName/g, props.name);
       writeFileSync(next, newNext)
       this.log(term.green("Updated next settings"))
-
+      
+      const nativeConfig = `${appPath}/packages/app/nativeforge.config.js`
+      const newNativeConfig = readFileSync(nativeConfig, "utf-8")
+        .replace("$appID", props.appId);
+      writeFileSync(nativeConfig, newNativeConfig)
+      
       const appJson = `${appPath}/apps/expo/app.json`
       const newAppJson = readFileSync(appJson, "utf-8")
         .replace(/\$appName/g, props.name)
@@ -89,15 +94,15 @@ Using default app name: nativeforgeApp
       this.log(term.green("Updated expo settings"))
       this.log(term.blue("Installing dependencies"))
       chdir(appPath)
-      exec("yarn install", (err, std) => {
+      exec("yarn", (err, std) => {
         if (err) {
           this.log(term.red("Installation failed"))
           this.log(err)
         } else {
           this.log(std)
+          this.log(term.green("Installed dependencies"))
+          this.log(term.blue("Thanks for using NativeForge"))
         }
-        this.log(term.green("Installed dependencies"))
-        this.log(term.blue("Thanks for using NativeForge"))
       })
     })
   }
