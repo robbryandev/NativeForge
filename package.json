@@ -1,6 +1,6 @@
 {
   "name": "generator-nativeforge",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "build cross platform apps using react native expo and generators",
   "license": "MIT",
   "files": [
@@ -9,6 +9,10 @@
     "tsconfig.json",
     "yarn.lock"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robbryandev/NativeForge.git"
+  },
   "keywords": [
     "yeoman-generator"
   ],
