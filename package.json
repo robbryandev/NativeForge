@@ -24,8 +24,10 @@
     "@inquirer/prompts": "^2.2.0",
     "cli-color": "^2.0.3",
     "fs-extra": "^11.1.1",
-    "inquirer": "^9.2.7",
     "gulp": "^4.0.2",
+    "inquirer": "^9.2.7",
+    "magicast": "^0.2.9",
+    "prettier": "^3.0.0",
     "yeoman-generator": "5.9.0"
   },
   "devDependencies": {
