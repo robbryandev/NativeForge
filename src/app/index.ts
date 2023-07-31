@@ -81,7 +81,7 @@ Using default app name: nativeforgeApp
       writeFileSync(next, newNext)
       this.log(term.green("Updated next settings"))
       
-      const nativeConfig = `${appPath}/packages/app/nativeforge.config.js`
+      const nativeConfig = `${appPath}/packages/app/nativeforge.config.mjs`
       const newNativeConfig = readFileSync(nativeConfig, "utf-8")
         .replace("$appID", props.appId);
       writeFileSync(nativeConfig, newNativeConfig)
