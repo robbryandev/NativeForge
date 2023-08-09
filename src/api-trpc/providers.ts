@@ -2,7 +2,7 @@ import fs from "fs-extra";
 import term from "cli-color";
 import cast from "magicast";
 import prettier from "prettier";
-import { MergeRecursive } from "./merge";
+import { MergeRecursive } from "../utils/merge";
 import * as parser from "@babel/parser";
 import * as _generate from "@babel/generator";
 const generate = _generate.default;

@@ -6,10 +6,7 @@ import term from "cli-color";
 import { input } from '@inquirer/prompts';
 import { readFileSync, writeFileSync } from 'fs';
 import { exec } from 'child_process';
-
-type BaseArgs = {
-  name: string
-}
+import { type BaseArgs } from '../common/types';
 
 type CustomProps = {
   name: string,

@@ -11,8 +11,7 @@ import addProviders from './providers';
 module.exports = class extends Generator {
     copyApiTemplate() {
         this.log(term.blue("Creating trpc api in your NativeForge project\n"));
-        const dir = cwd();
-        let configPath = `${dir}/packages/app/nativeforge.config.mjs`
+        let configPath = `./packages/app/nativeforge.config.mjs`
         cast.loadFile(configPath).then((ast) => {
             if (ast.exports.default.features.includes("api-trpc")) {
                 this.log(term.red("your project already generated a trpc api"));
@@ -21,8 +20,8 @@ module.exports = class extends Generator {
             } else {
                 const tempApp = join(__dirname, '/template/apps');
                 const tempPackages = join(__dirname, '/template/packages');
-                fs.copySync(tempApp, `${dir}/apps`);
-                fs.copySync(tempPackages, `${dir}/packages`);
+                fs.copySync(tempApp, `./apps`);
+                fs.copySync(tempPackages, `./packages`);
                 const newPackages = [
                     "@trpc/client",
                     "@trpc/server",
